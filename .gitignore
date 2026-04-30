@@ -4,19 +4,8 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Secrets and local runtime state
-.env
-.env.*
-*.key
-*.pem
-*.sqlite
-*.sqlite3
-*.db
-*.db-journal
-
-# Generated/private media
-exports/
-outputs/
-media/
+# Keep this public repo docs-only.
+local/
+private/
+runtime-data/
 assets/private/
-

@@ -4,7 +4,7 @@
 
 Future ChatGPT, Claude, Codex, and collaborator sessions should read [`docs/START_HERE_CURRENT_CONTEXT.md`](docs/START_HERE_CURRENT_CONTEXT.md) first.
 
-This repository is a sanitized public context bundle for AI Influencer Studio. It is designed to help ChatGPT, Claude, Codex, and human collaborators understand the project at a high level without exposing private source material.
+This repository is a sanitized public context bundle for AI Influencer Studio. It is designed to help AI sessions and human collaborators understand the project at a high level without exposing private source material.
 
 This is not the active private build repository. It does not contain runtime secrets, private workbooks, raw character assets, local n8n data, generated media, or private operational files.
 
@@ -21,10 +21,10 @@ This is not the active private build repository. It does not contain runtime sec
 - Private repository source tree
 - Raw character files or assets
 - Private workbook or vault data
-- `.env` files, credentials, tokens, or API keys
-- n8n local user data, SQLite databases, or credential stores
+- Environment files, credentials, tokens, or API keys
+- n8n local user data, database files, or credential stores
 - Generated images, videos, or ComfyUI output
-- NSFW/private operational detail
+- Private operational detail
 
 ## Current Project Direction
 

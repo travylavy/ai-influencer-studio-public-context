@@ -1,10 +1,16 @@
 # Current Build Status
 
-Last updated: 2026-04-30
-
 ## Repository Shape
 
-The private Codex working repository has been reconciled from an old branch-export/audit mirror into the active working repo layout. The old exported branch snapshot folders were removed from the active root, while historical material remains preserved through Git history and source refs.
+The private Codex working repository has been reconciled from an old branch-export and audit mirror into the active working repo layout. Old exported branch snapshot folders were removed from the active root, while historical material remains preserved through Git history and source refs.
+
+Private main source signal at generation time: `09d7830`.
+
+## Recent Private Repo Milestones
+
+- PR #2 merged: repo-shape and source-of-truth reconciliation.
+- PR #3 merged: Workflow A n8n importability fix.
+- PR #4 merged: private repo public-context handoff pointer.
 
 ## Workflow A
 
@@ -32,4 +38,3 @@ Pending:
 ## Public Context Repo Status
 
 This repo is a sanitized context bundle only. It does not include private source code, runtime credentials, local n8n data, character assets, workbook rows, or generated media.
-

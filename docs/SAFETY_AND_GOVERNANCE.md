@@ -13,22 +13,21 @@ This public context repo intentionally exposes only sanitized, high-level projec
 
 The following must not be published here:
 
-- Secrets, tokens, credential IDs, API keys, or `.env` values
+- Secrets, tokens, credential IDs, API keys, or environment values
 - Private workbook rows, vault data, or live operational datasets
 - Raw character files, private character assets, generated images, or generated video
-- Local n8n user folders, SQLite databases, credential stores, or execution logs
+- Local n8n user folders, database files, credential stores, or execution logs
 - Private local machine paths
-- NSFW/private operational detail
+- Private operational detail
 
 ## Runtime Safety
 
 - n8n owns phase-one routing, state, timing, and Data Store operations.
 - ComfyUI is execution-only and should not be exposed as a public reasoning layer.
 - `character_id` must remain present in workflow contracts and logs.
-- SFW and NSFW operational boundaries must remain protected.
+- SFW and private operational boundaries must remain protected.
 - Workbook-like data handling should be append-safe and should avoid destructive rewrites.
 
 ## Public Context Boundary
 
 This repo may summarize what exists privately, but it must not become a competing source of truth. Future updates should be generated or reviewed from the private repo and should remain high-level and sanitized.
-

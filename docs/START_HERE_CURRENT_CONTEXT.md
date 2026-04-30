@@ -17,7 +17,8 @@ Old Google Drive files, uploaded source files, and older exports are historical 
 
 - PR #2 merged: repo-shape/source-of-truth reconciliation.
 - PR #3 merged: Workflow A n8n importability fix.
-- `main` was synced after PR #3.
+- PR #4 merged: private repo public-context handoff pointer.
+- Private `main` was synced after PR #4.
 - Workflow A JSON is importable into a clean n8n validation DB.
 - Workflow remains inactive (`active: false`).
 - No webhook payload runtime test has been completed yet.
@@ -33,7 +34,7 @@ This repo contains only sanitized docs. It excludes private source tree content,
 Resume from Workflow A runtime validation:
 
 1. Use the clean n8n validation setup.
-2. Create/map the OpenAI credential in the n8n UI without exposing the API key.
+2. Create or map the OpenAI credential in the n8n UI without exposing the API key.
 3. Run the controlled test payload.
 4. Verify `users` Data Store behavior.
 5. Verify `logs` Data Store behavior.
@@ -49,5 +50,4 @@ Do not start new build work before this validation step.
 
 ## Public Context Warning
 
-Do not assume this public repo auto-updates when the private repo changes. Public context must be regenerated intentionally after private changes and leak-scanned before push.
-
+Do not assume every private change is reflected here until the public-context sync workflow has completed successfully. Public context is generated from controlled templates and leak-scanned before push.

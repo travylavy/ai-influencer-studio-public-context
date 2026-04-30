@@ -6,17 +6,24 @@ Workflow A is the phase-one text-only DM response loop.
 
 Workflow A is importable into local n8n 2.18.5 after adding a stable top-level workflow ID. It remains inactive by default. Full webhook payload execution, OpenAI credential mapping, Data Store write verification, and acceptance evidence are still pending.
 
+Current public-safe artifact signals:
+
+- workflow name: `workflow_dm_text_response_v1`
+- workflow id: `workflowAResponseV1`
+- active flag: `false`
+- node count: `16`
+
 ## Scope
 
 In scope:
 
 - Incoming webhook payload normalization
 - First-class `character_id`
-- n8n Data Store lookup/create/update for users
+- n8n Data Store lookup, create, and update for users
 - Basic state and flag calculation
 - Delay calculation
 - OpenAI text response node
-- Response cleanup/fallback
+- Response cleanup and fallback
 - Interaction log record creation
 - n8n Data Store log insert
 - Final response shape with text and `image_url`
@@ -28,7 +35,7 @@ Out of scope:
 - Hermes
 - Google Drive upload
 - Monetization logic
-- Dashboard/Mission Control as runtime authority
+- Dashboard or Mission Control as runtime authority
 
 ## Public Contract Summary
 
@@ -72,4 +79,3 @@ Log fields:
 ## Current Validation Boundary
 
 The workflow import gate has passed locally for n8n 2.18.5. This does not mean the workflow is production-ready. Runtime testing still needs local webhook execution, credential binding, Data Store verification, repeat-user behavior verification, and acceptance evidence.
-

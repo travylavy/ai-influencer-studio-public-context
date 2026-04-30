@@ -4,7 +4,7 @@ AI Influencer Studio is an AI character and interaction system organized around 
 
 ## Core Roles
 
-- ChatGPT/Claude/Codex: reasoning, planning, code review, documentation, and controlled implementation support.
+- ChatGPT, Claude, and Codex: reasoning, planning, code review, documentation, and controlled implementation support.
 - n8n: workflow routing, state transitions, timing, webhook handling, and phase-one runtime Data Store operations.
 - OpenAI: text response generation when called by approved workflow nodes.
 - ComfyUI: image execution only. It is not the reasoning brain and is not part of Workflow A.
@@ -16,7 +16,7 @@ AI Influencer Studio is an AI character and interaction system organized around 
 - Workflows should be deterministic wherever possible.
 - Runtime artifacts must be versioned and rollbackable.
 - No agent or workflow should auto-execute sensitive actions without explicit approval.
-- SFW and NSFW domains must remain separated.
+- SFW and private policy domains must remain separated.
 - Workbook-style data must be append-safe and must not be directly rewritten by agents.
 
 ## Phase-One Data Boundary
@@ -27,4 +27,3 @@ Phase one uses n8n Data Store concepts for text DM runtime state:
 - `logs` store for interaction history
 
 No public context file should expose private workbook rows, character source files, or live credentials.
-
