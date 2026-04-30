@@ -1,0 +1,22 @@
+# Local/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Secrets and local runtime state
+.env
+.env.*
+*.key
+*.pem
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+
+# Generated/private media
+exports/
+outputs/
+media/
+assets/private/
+
