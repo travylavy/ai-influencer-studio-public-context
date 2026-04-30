@@ -1,5 +1,9 @@
 # AI Influencer Studio Public Context
 
+## Start Here
+
+Future ChatGPT, Claude, Codex, and collaborator sessions should read [`docs/START_HERE_CURRENT_CONTEXT.md`](docs/START_HERE_CURRENT_CONTEXT.md) first.
+
 This repository is a sanitized public context bundle for AI Influencer Studio. It is designed to help ChatGPT, Claude, Codex, and human collaborators understand the project at a high level without exposing private source material.
 
 This is not the active private build repository. It does not contain runtime secrets, private workbooks, raw character assets, local n8n data, generated media, or private operational files.
@@ -31,4 +35,3 @@ Workflow A is the first phase-one runtime workflow: a text-only DM response loop
 ## Public Context Rule
 
 This repo is a public summary layer only. The private working repository remains the source of implementation truth. If anything here conflicts with the private repo, the private repo wins.
-
