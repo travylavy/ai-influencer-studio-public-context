@@ -18,12 +18,16 @@ Old Google Drive files, uploaded source files, and older exports are historical 
 - PR #2 merged: repo-shape/source-of-truth reconciliation.
 - PR #3 merged: Workflow A n8n importability fix.
 - PR #4 merged: private repo public-context handoff pointer.
-- Private `main` was synced after PR #4.
-- Workflow A JSON is importable into a clean n8n validation DB.
+- PR #6 merged: Workflow A local MSI/n8n validation.
+- PR #7 merged: private post-merge Workflow A status wording.
+- Workflow A local MSI/n8n validation passed and PR #6 was merged to private main.
 - Workflow remains inactive (`active: false`).
-- No webhook payload runtime test has been completed yet.
-- No credentials were created inside n8n.
-- No ManyChat, ComfyUI, or public runtime integration has been completed.
+- Text-only DM loop validation succeeded locally.
+- OpenAI Chat call succeeded.
+- users/logs persistence succeeded through n8n-native Data Table-compatible local runtime.
+- `character_id` was preserved.
+- Response shape remained `{ "text": "...", "image_url": null }`.
+- No ManyChat, ComfyUI, image generation, or public runtime integration has been validated.
 
 ## Current Public Repo State
 
@@ -31,15 +35,9 @@ This repo contains only sanitized docs. It excludes private source tree content,
 
 ## Next Correct Build Step
 
-Resume from Workflow A runtime validation:
+Review the merged Workflow A local validation milestone and decide the next approved workstream. The prefixed local webhook URL behavior remains a review item before production-like use.
 
-1. Use the clean n8n validation setup.
-2. Create or map the OpenAI credential in the n8n UI without exposing the API key.
-3. Run the controlled test payload.
-4. Verify `users` Data Store behavior.
-5. Verify `logs` Data Store behavior.
-
-Do not start new build work before this validation step.
+Do not start ManyChat, ComfyUI, image generation, Workflow B, production deployment, or public-runtime work without explicit approval.
 
 ## Authority Rule
 

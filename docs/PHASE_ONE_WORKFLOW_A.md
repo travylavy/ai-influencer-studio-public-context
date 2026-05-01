@@ -4,7 +4,7 @@ Workflow A is the phase-one text-only DM response loop.
 
 ## Status
 
-Workflow A is importable into local n8n 2.18.5 after adding a stable top-level workflow ID. It remains inactive by default. Full webhook payload execution, OpenAI credential mapping, Data Store write verification, and acceptance evidence are still pending.
+Workflow A local MSI/n8n validation passed and PR #6 was merged to private main. Workflow A remains inactive and is not live, production-deployed, ManyChat validated, ComfyUI validated, image-generation validated, or public-runtime validated.
 
 Current public-safe artifact signals:
 
@@ -13,19 +13,29 @@ Current public-safe artifact signals:
 - active flag: `false`
 - node count: `20`
 
+Public-safe validation evidence:
+
+- text-only DM loop validated locally
+- OpenAI Chat call succeeded
+- users/logs persistence succeeded through n8n-native Data Table-compatible local runtime
+- `character_id` was preserved
+- response shape remained `{ "text": "...", "image_url": null }`
+- workflow remained inactive
+- no ManyChat, ComfyUI, or image generation was validated
+
 ## Scope
 
 In scope:
 
 - Incoming webhook payload normalization
 - First-class `character_id`
-- n8n Data Store lookup, create, and update for users
+- n8n-native users persistence lookup, create, and update
 - Basic state and flag calculation
 - Delay calculation
 - OpenAI text response node
 - Response cleanup and fallback
 - Interaction log record creation
-- n8n Data Store log insert
+- n8n-native logs persistence insert
 - Final response shape with text and `image_url`
 
 Out of scope:
@@ -78,4 +88,4 @@ Log fields:
 
 ## Current Validation Boundary
 
-The workflow import gate has passed locally for n8n 2.18.5. This does not mean the workflow is production-ready. Runtime testing still needs local webhook execution, credential binding, Data Store verification, repeat-user behavior verification, and acceptance evidence.
+Workflow A has local MSI/n8n validation evidence for the controlled text-only DM path. This does not mean the workflow is production-ready or live. The prefixed local webhook URL behavior remains a review item before production-like use, and future hardening should still cover malformed payloads, repeat-user behavior, fallback behavior, and production webhook path review.

@@ -4,7 +4,7 @@
 
 The private Codex working repository has been reconciled from an old branch-export and audit mirror into the active working repo layout. Old exported branch snapshot folders were removed from the active root, while historical material remains preserved through Git history and source refs.
 
-Private main source signal at generation time: `62b38dc`.
+Private main source signal at generation time: `a2ad808`.
 
 ## Recent Private Repo Milestones
 
@@ -23,17 +23,26 @@ Completed:
 - Local n8n foundation setup
 - Clean n8n validation folder setup
 - n8n 2.18.5 importability gate passed after a one-line workflow ID fix
+- PR #6 merged Workflow A local MSI/n8n validation into private main
+- PR #7 updated private post-merge status wording
+- text-only DM loop validated locally
+- OpenAI Chat call succeeded
+- users/logs persistence succeeded through n8n-native Data Table-compatible local runtime
+- `character_id` was preserved
+- response shape remained `{ "text": "...", "image_url": null }`
 - Workflow remains inactive by default
 
 Pending:
 
-- OpenAI credential binding in local n8n UI
-- Local webhook test payload execution
-- `users` Data Store write verification
-- repeat interaction and `interaction_count` verification
-- `logs` Data Store insert verification
-- acceptance evidence capture
+- production webhook path review because local validation used a prefixed local n8n URL
+- repeat interaction and `interaction_count` hardening
+- malformed payload hardening
+- fallback behavior hardening
 - any decision about production activation
+- ManyChat validation
+- ComfyUI validation
+- image-generation validation
+- public-runtime validation
 
 ## Public Context Repo Status
 

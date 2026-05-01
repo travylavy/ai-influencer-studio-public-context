@@ -28,9 +28,11 @@ This is not the active private build repository. It does not contain runtime sec
 
 ## Current Project Direction
 
-AI Influencer Studio is moving toward deterministic, human-approved runtime workflows where n8n owns routing, state, timing, and Data Store usage for phase-one text interactions.
+AI Influencer Studio is moving toward deterministic, human-approved runtime workflows where n8n owns routing, state, timing, and n8n-native persistence for phase-one text interactions.
 
 Workflow A is the first phase-one runtime workflow: a text-only DM response loop using n8n, a first-class `character_id`, OpenAI text response generation, user state updates, and interaction logging.
+
+Workflow A local MSI/n8n validation passed and PR #6 was merged to private main. Workflow A remains inactive and is not live, production-deployed, ManyChat validated, ComfyUI validated, image-generation validated, or public-runtime validated.
 
 ## Public Context Rule
 

@@ -22,7 +22,7 @@ The following must not be published here:
 
 ## Runtime Safety
 
-- n8n owns phase-one routing, state, timing, and Data Store operations.
+- n8n owns phase-one routing, state, timing, and n8n-native persistence operations.
 - ComfyUI is execution-only and should not be exposed as a public reasoning layer.
 - `character_id` must remain present in workflow contracts and logs.
 - SFW and private operational boundaries must remain protected.
