@@ -11,7 +11,7 @@ Current public-safe artifact signals:
 - workflow name: `workflow_dm_text_response_v1`
 - workflow id: `workflowAResponseV1`
 - active flag: `false`
-- node count: `16`
+- node count: `20`
 
 ## Scope
 
