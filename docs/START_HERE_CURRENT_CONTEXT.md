@@ -20,13 +20,22 @@ Old Google Drive files, uploaded source files, and older exports are historical 
 - PR #4 merged: private repo public-context handoff pointer.
 - PR #6 merged: Workflow A local MSI/n8n validation.
 - PR #7 merged: private post-merge Workflow A status wording.
+- PR #10 merged: Workflow A hardening evidence preserved in private main.
+- PR #9 merged: Workflow A payload-validation gate.
 - Workflow A local MSI/n8n validation passed and PR #6 was merged to private main.
+- Workflow A payload-validation gate was merged to private main.
 - Workflow remains inactive (`active: false`).
 - Text-only DM loop validation succeeded locally.
 - OpenAI Chat call succeeded.
 - users/logs persistence succeeded through n8n-native Data Table-compatible local runtime.
 - `character_id` was preserved.
 - Response shape remained `{ "text": "...", "image_url": null }`.
+- Missing-message hardening found a required-field validation risk.
+- Payload validation now checks `user_id`, `platform`, `character_id`, and `message` before OpenAI and before users/logs persistence.
+- Missing, null, or blank required fields return safe JSON with `image_url: null`.
+- Invalid payloads do not call OpenAI, create/update users, or write a normal interaction log.
+- Valid text-DM behavior remains preserved.
+- Workflow A remains text-only.
 - No ManyChat, ComfyUI, image generation, or public runtime integration has been validated.
 
 ## Current Public Repo State
@@ -35,7 +44,7 @@ This repo contains only sanitized docs. It excludes private source tree content,
 
 ## Next Correct Build Step
 
-Review the merged Workflow A local validation milestone and decide the next approved workstream. The prefixed local webhook URL behavior remains a review item before production-like use.
+Review the merged Workflow A local validation and payload-validation milestones and decide the next approved workstream. The prefixed local webhook URL behavior remains a review item before production-like use.
 
 Do not start ManyChat, ComfyUI, image generation, Workflow B, production deployment, or public-runtime work without explicit approval.
 

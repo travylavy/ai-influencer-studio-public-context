@@ -32,7 +32,9 @@ AI Influencer Studio is moving toward deterministic, human-approved runtime work
 
 Workflow A is the first phase-one runtime workflow: a text-only DM response loop using n8n, a first-class `character_id`, OpenAI text response generation, user state updates, and interaction logging.
 
-Workflow A local MSI/n8n validation passed and PR #6 was merged to private main. Workflow A remains inactive and is not live, production-deployed, ManyChat validated, ComfyUI validated, image-generation validated, or public-runtime validated.
+Workflow A local MSI/n8n validation passed and PR #6 was merged to private main. Workflow A payload-validation gate was merged to private main. Workflow A remains inactive and is not live, production-deployed, ManyChat validated, ComfyUI validated, image-generation validated, or public-runtime validated.
+
+The payload-validation gate checks required inbound fields before OpenAI and before users/logs persistence. Missing, null, or blank required fields return a safe text-only JSON response with `image_url: null`.
 
 ## Public Context Rule
 

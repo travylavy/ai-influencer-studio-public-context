@@ -13,7 +13,7 @@ This public context repo intentionally exposes only sanitized, high-level projec
 
 The following must not be published here:
 
-- Secrets, tokens, credential IDs, API keys, or environment values
+- Secrets, tokens, credential data, API keys, or environment values
 - Private workbook rows, vault data, or live operational datasets
 - Raw character files, private character assets, generated images, or generated video
 - Local n8n user folders, database files, credential stores, or execution logs
