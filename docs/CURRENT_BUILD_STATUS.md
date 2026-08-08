@@ -4,7 +4,7 @@
 
 The private Codex working repository has been reconciled from an old branch-export and audit mirror into the active working repo layout. Old exported branch snapshot folders were removed from the active root, while historical material remains preserved through Git history and source refs.
 
-Private main source signal at generation time: `a4e6d42`.
+Private main source signal at generation time: `b1b011b`.
 
 ## Recent Private Repo Milestones
 
